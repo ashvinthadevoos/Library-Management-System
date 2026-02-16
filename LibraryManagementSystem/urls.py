@@ -20,8 +20,10 @@ from books import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('books/create/',views.BookCreateView.as_view(),name='create'),
+    path('books/add/',views.BookCreateView.as_view(),name='create'),
     path('books/all/',views.BookListView.as_view(),name='list'),
     path('books/edit/<int:id>',views.BookEditView.as_view(),name='edit'),
-    path('books/remove/<int:id>',views.BookDeleteView.as_view(),name='delete')
+    path('books/remove/<int:id>',views.BookDeleteView.as_view(),name='delete'),
+    path('login/',views.LoginView.as_view(),name='login'),
+    path('signup/',views.SignupView.as_view(),name='signup')
 ]
